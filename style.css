@@ -1,0 +1,54 @@
+:root {
+    --color-1: #555;
+    --color-2: #888;
+    --color-3: #ddd;
+    --color-4: #f7f7f7;
+}
+
+.tabs {
+    margin: 30px auto;
+    width: 80%;
+    font-family: sans-serif;
+    color: var(--color-1);
+    font-size: 14px;
+    line-height: 24px;
+
+    & ul.btns {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+
+        & a {
+            transition: all 0.3s ease-in;
+            display: block;
+            padding: 2vw;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--color-2);
+            background-color: var(--color-4);
+            border-bottom: 2px solid transparent;
+
+
+            &:hover, &.active {
+                background-color: var(--color-3);
+                border-bottom: 2px solid var(--color-2);
+            }
+
+            @media (width <= 450px) {
+                & {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    & .tabContent {
+        & div {
+            padding: 30px;
+            box-shadow: 0 1px 4px var(--color-3);
+        }
+    }
+}
